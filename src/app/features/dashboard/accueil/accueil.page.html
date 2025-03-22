@@ -1,0 +1,53 @@
+<app-dashboard-layout>
+  <ion-content id="main-content" [fullscreen]="true" class="ion-padding">
+    <!-- Dashboard Overview -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Beneficiaries Overview</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>
+            <h2>Total Beneficiaries</h2>
+            <p>54</p>
+          </ion-label>
+        </ion-item>
+        <ion-button expand="full" color="primary" (click)="goToBeneficiariesList()">View All Beneficiaries</ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Bank Transfers Overview</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>
+            <h2>Total Transfers</h2>
+            <p>88</p>
+          </ion-label>
+        </ion-item>
+        <ion-button expand="full" color="primary" (click)="goToTransfersHistory()">View All Transfers</ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Optional: Display Latest Beneficiary and Transfer -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Latest Beneficiary</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Achraf TAFFAH</p>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Latest Transfer</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Hassan jalil</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>  
+</app-dashboard-layout>

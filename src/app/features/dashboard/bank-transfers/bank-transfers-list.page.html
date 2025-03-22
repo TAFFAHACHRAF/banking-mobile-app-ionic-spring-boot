@@ -1,0 +1,17 @@
+<app-dashboard-layout>
+  <ion-content id="main-content" [fullscreen]="true" class="ion-padding">  
+    <ion-list>
+      <!-- List of Bank Transfers -->
+      <ion-item *ngFor="let transfer of transfers">
+        <ion-label>
+          <h2>{{ transfer.senderName }} to {{ transfer.receiverName }}</h2>
+          <p>{{ transfer.amount | currency }}</p>
+          <p>{{ transfer.date | date: 'short' }}</p>
+        </ion-label>
+        <ion-button fill="clear" color="primary" slot="end" (click)="viewTransfer(transfer)">
+          View Details
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</app-dashboard-layout>

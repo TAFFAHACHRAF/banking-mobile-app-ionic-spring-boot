@@ -1,0 +1,18 @@
+<app-dashboard-layout>
+  <ion-content id="main-content" [fullscreen]="true" class="ion-padding">  
+    <ion-list>
+      <!-- List of Beneficiaries -->
+      <ion-item *ngFor="let beneficiary of beneficiaries">
+        <ion-label>
+          <h2>{{ beneficiary.fullName }}</h2>
+          <p>{{ beneficiary.address }}</p>
+          <p>{{ beneficiary.phone }}</p>
+          <p>{{ beneficiary.email }}</p>
+        </ion-label>
+        <ion-button fill="clear" color="primary" slot="end" (click)="viewBeneficiary(beneficiary)">
+          View Details
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</app-dashboard-layout>
